@@ -1,11 +1,11 @@
 import './Footer.css'
 import Card from 'react-bootstrap/Card'
-
+import cgLogo from '../../images/cgLogo.png'
 export default function Footer(){
     return(
         <footer>
             <Card>
-            <Card.Footer>Logo</Card.Footer>
+            <Card.Footer><img className='images' src={cgLogo} /></Card.Footer>
             <Card.Body >  
                 <Card.Text>
                       ©ConociendoGuanacaste, Inc. 2022. 
