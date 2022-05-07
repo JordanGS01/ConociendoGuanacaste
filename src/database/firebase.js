@@ -1,10 +1,8 @@
 // Aqui se encuentra la config de DB y sus CRUDS
-import { initializeApp } from "firebase/app";
-import 'firebase/storage';
-import { createUserWithEmailAndPassword, getAuth,signInWithEmailAndPassword } from "firebase/auth";
-import { collection, deleteDoc, doc, getDocs, getFirestore, setDoc } from "firebase/firestore";
-import 'firebase/auth';
-import { uuid } from 'uuidv4';
+import { initializeApp } from "firebase/app"
+import { createUserWithEmailAndPassword, getAuth,signInWithEmailAndPassword } from "firebase/auth"
+import { collection, deleteDoc, doc, getDocs, getFirestore, setDoc } from "firebase/firestore"
+import {v4 as uuid } from 'uuid'
 
 const firebaseConfig = {
   apiKey: "AIzaSyAl4229uhxtEztfRpmGp2PBWR0vzuOuavI",

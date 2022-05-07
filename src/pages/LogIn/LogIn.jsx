@@ -1,8 +1,8 @@
 import './LogIn.css'
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import {firebaseIniciarSesion} from "../database/firebase";
-
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import {firebaseIniciarSesion} from '../../database/firebase'
+import { Container, Form } from 'react-bootstrap'
 
 export default function LogIn(){
 
