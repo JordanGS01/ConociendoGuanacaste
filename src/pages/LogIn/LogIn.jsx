@@ -5,8 +5,6 @@ import {firebaseIniciarSesion} from '../../database/firebase'
 import { Container, Form } from 'react-bootstrap'
 
 export default function LogIn(){
-
-    
     let navigate = useNavigate()
     // Funcion para validar si existe o no el usuario e ingresar a pagina principal
     async function iniciarSesion () {
