@@ -5,6 +5,7 @@ import {
 
 import './App.css';
 import TopNavBar from './components/TopNavBar/TopNavBar'
+import Footer from './components/Footer/Footer';
 import Conocenos from './pages/Conocenos/Conocenos'
 import Cantones from './pages/Cantones/Cantones'
 import Canton from './pages/Canton/Canton'
@@ -32,6 +33,7 @@ function App() {
         <Route path='/LogIn' element={<LogIn />} />
         <Route path='/Registro' element={<Registro />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
