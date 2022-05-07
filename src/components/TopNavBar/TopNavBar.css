@@ -1,44 +1,18 @@
-.TopNavBarContainer {
-  display: flex;
-  height: 30px;
+.TNV-Container{
   background-color: #6B3E14;
-  justify-content: space-between;
 }
-.TopNavBarContainer img {
-  width: 30px;
-}
-.TopNavBarContainer button:hover {
-  border: solid;
-  border-width: 0.1px;
-  border-color: rgba(5, 5, 5, 0.75);
+.TNV-Container img{
+  width: 40px;
 }
 
-.navButtonsContainer{
-  width: 60%;
-  display: flex;
-  justify-content: center;
-}
-.navButtonsContainer button{
-  background-color: #6B3E14;
-  border: none;
-  font-size: 12px;
-  color: white;
-  margin-left: 15px;
+.TNV-WhiteText{
+  color: white;  
 }
 
-.logIngOutRegisterContainer{
-  display: flex;
-  justify-content: right;
-  align-items: center;
-  margin-right: 20px;
-  height: 100%;
-  width: 20%;
-}
-.logIngOutRegisterContainer button{
-  border: none;  
-  background-color: #5CB148;
-  border-radius: 5px;
-  height: 20px;
+.TNV-Button{
   margin-left: 10px;
-  font-size: 12px;
+}
+
+.TNV-LinkRouter{
+  text-decoration: none;
 }
