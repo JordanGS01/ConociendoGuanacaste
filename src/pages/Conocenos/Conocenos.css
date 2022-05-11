@@ -1,0 +1,8 @@
+#info1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#Title{
+    padding: 100px;
+}

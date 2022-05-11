@@ -1,6 +1,6 @@
 import './Conocenos.css'
 import Carousel from 'react-bootstrap/Carousel'
-
+import Texto from '../../components/Texto/Texto'
 
 export default function Conocenos(){
     return(
@@ -40,6 +40,19 @@ export default function Conocenos(){
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
+        <h3 id='Title'>Acerca de nosotros</h3>
+        <div id='info1'>
+        <Texto titulo= "¿Quienes somos?" 
+        contenido = "Somos un grupo de estudiantes" />
+        <Texto titulo= "Proposito" 
+        contenido = "Que los patrimonios culturales de La provincia de Guanacaste sean más conocidos "/>
+        </div>
+        <div id='info1'>
+        <Texto titulo= "¿A que nos dedicamos?" 
+        contenido = "Somos un grupo de estudiantes" />
+        <Texto titulo= "¿Por qué confiar en nosotros?" 
+        contenido = "Que los patrimonios culturales de La provincia de Guanacaste sean más conocidos "/>
+        </div>
         </>
     )
 }
