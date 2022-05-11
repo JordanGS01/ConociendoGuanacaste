@@ -4,6 +4,18 @@
     justify-content: center;
 }
 
-.images{
+.Footer-imageContainer{
+    background-color: white;
+}
+.Footer-image{
     width: 100px;
+}
+
+hr{
+    color: black;
+    width: 90%;
+}
+
+footer{
+    text-align: center;
 }

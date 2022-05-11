@@ -4,19 +4,25 @@ import cgLogo from '../../images/cgLogo.png'
 export default function Footer(){
     return(
         <footer>
-            <Card>
-            <Card.Footer><img className='images' src={cgLogo} /></Card.Footer>
-            <Card.Body >  
+            <Card border='light'>
+            <Card.Footer className='Footer-imageContainer'>
+                <img className='Footer-image' src={cgLogo} />                
+            </Card.Footer>
+            <hr/>
+            <Card.Body >
                 <Card.Text>
-                      ©ConociendoGuanacaste, Inc. 2022. 
+                      <small>©ConociendoGuanacaste, Inc. 2022. </small>
                 </Card.Text>
                 <Card.Text>
-                Correo electrónico: ConociendomiGuanacaste@gmai.com
+                    <small>Correo electrónico:</small>
+                    <br/>
+                    <small>ConociendomiGuanacaste@gmai.com</small>
                 </Card.Text>
                 <Card.Text>
-                Contacto directo: 506 2495 0972
-                </Card.Text>
-                
+                    <small>Contacto directo:</small>
+                    <br/>
+                    <small>506 2495 0972</small>
+                </Card.Text>                
             </Card.Body>
             </Card>
         </footer>
