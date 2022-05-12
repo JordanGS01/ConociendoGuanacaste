@@ -2,10 +2,11 @@ import './LogIn.css'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {firebaseIniciarSesion} from '../../database/firebase'
-import { Container, Form } from 'react-bootstrap'
+import {Button, Form , Card} from 'react-bootstrap'
+import imagenLog from '../../images/imagenLog.PNG'
+import cgLogo from '../../images/cgLogo.png'
 
 export default function LogIn(){
-
     
     let navigate = useNavigate()
     // Funcion para validar si existe o no el usuario e ingresar a pagina principal
@@ -14,12 +15,10 @@ export default function LogIn(){
         let sesionIniciada = await firebaseIniciarSesion(valorEmail, valorCon);
 
         if (sesionIniciada) {
-            alert("exito al iniciar");
+            alert("Exito al iniciar");
             navigate('/');
         } else {
           alert('La informacion no es correcta');
-          
-
         }
       }
 
@@ -29,7 +28,7 @@ export default function LogIn(){
       const onChangeEmail = function(valor) {
           setValorEmail(valor.target.value)
         }
-    
+        
         const [valorCon, setValorCon] = useState('');
       
       const onChangeCon = function(valor) {
@@ -37,23 +36,30 @@ export default function LogIn(){
       }
 
     return(
+      <div class="row">
+            <div class="col-md-6">
+                <img className='imagLog' src={imagenLog} />
+            </div>
+            <div name="form" class="col-md-6">
+              <div id="bloqueFormLog">
+                <img className='images' src={cgLogo} />
+                <div class="titulo">
+                  <h3>Ingresar</h3>
+                </div>
+                <Form>
+                  <Form.Group  controlId="formBasicEmail">
+                    <Form.Control type="email" placeholder="Correo electrónico" onChange={onChangeEmail} />
+                  </Form.Group>
+                  <br/>
 
-        // formulario de Login 
-        <div>
-    <Container >
-      <Form >
-        <h3>Ingresar</h3>
-        <Form.Group >
-        <input type="email" class="form-control" placeholder="Correo Electrónico" required onChange={onChangeEmail}/>
-        </Form.Group>
-        <br/>
-        <Form.Group >
-        <input type="password" class="form-control"  placeholder="Contraseña" required onChange={onChangeCon}/>
-        </Form.Group>
-        <br/>
-        <button type="Submit" onClick={iniciarSesion} id="BotonForm">Ingresar</button>
-      </Form>
-    </Container>
-        </div>
+                  <Form.Group controlId="formBasicPassword">
+                    <Form.Control type="password" placeholder="Ingresar contraseña" onChange={onChangeCon} />
+                  </Form.Group>
+                  <br/>
+                  <Button variant="success" className='TNV-Button'onClick={iniciarSesion}>Ingresar</Button>
+                </Form>
+              </div>
+            </div>
+          </div>
     )
 }
