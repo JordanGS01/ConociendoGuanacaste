@@ -1,0 +1,25 @@
+body {
+    margin:0;
+    padding:0;
+}
+
+.imagLog{
+    width: 610px;
+}
+
+.images{
+    margin-top : 2vw;
+    margin-left : 15vw;
+    width: 250px;
+}
+
+.titulo{
+    margin-top : 0vw;
+    margin-left : 7vw;
+}
+
+form{
+    width: 35vw; 
+    margin:auto;
+    text-align: center;
+}
