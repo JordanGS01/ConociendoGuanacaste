@@ -16,18 +16,21 @@ export default function Cantones(){
     }, [])
     
     return(
-        <main className='CantonesContainer'>
-            {data.map((canton) => {
-                return(
-                    <CardCantones
-                        key={canton.nombre}
-                        link=""
-                        src={canton.img}
-                        nombre={canton.nombre}
-                        descripcion={canton.descripcion}
-                    />
-                )
-            })}            
-        </main>
+        <>
+            <h1 className='CantonesTitle'>Cantones de Guanacaste</h1>
+            <main className='CantonesContainer'>            
+                {data.map((canton) => {
+                    return(
+                        <CardCantones
+                            key={canton.nombre}
+                            link={`/Cantones/${canton.nombre}`}
+                            src={canton.img}
+                            nombre={canton.nombre}
+                            descripcion={canton.descripcion}
+                        />
+                    )
+                })}            
+            </main>
+        </>
     )
 }

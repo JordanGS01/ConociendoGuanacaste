@@ -1,3 +1,8 @@
+.CantonesTitle{
+    text-align: center;
+    margin-top: 50px;
+}
+
 .CantonesContainer{
     display: grid;
     grid-template-columns: 30% 30% 30%;
