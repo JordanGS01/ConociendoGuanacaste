@@ -16,6 +16,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
+const db = getFirestore(app)
 const auth = getAuth();
 
 export function firebaseRegistrarUsuario(email, password) {
@@ -56,3 +57,5 @@ export async function firebaseEliminar(coleccion, id) {
   debugger
   await deleteDoc(doc(getFirestore(), coleccion, id));
 }
+
+export {db}
