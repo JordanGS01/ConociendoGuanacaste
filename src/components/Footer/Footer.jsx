@@ -4,10 +4,8 @@ import cgLogo from '../../images/cgLogo.png'
 export default function Footer(){
     return(
         <footer>
-            <Card border='light'>
-            <Card.Footer className='Footer-imageContainer'>
-                <img className='Footer-image' src={cgLogo} />                
-            </Card.Footer>
+            <Card border='light'>            
+            <img className='Footer-image' src={cgLogo} />                            
             <hr/>
             <Card.Body >
                 <Card.Text>

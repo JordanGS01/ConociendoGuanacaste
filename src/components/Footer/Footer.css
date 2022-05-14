@@ -4,11 +4,8 @@
     justify-content: center;
 }
 
-.Footer-imageContainer{
-    background-color: white;
-}
 .Footer-image{
-    width: 100px;
+    width: 200px;
 }
 
 hr{
@@ -17,5 +14,6 @@ hr{
 }
 
 footer{
+    margin-top: 50px;
     text-align: center;
 }
