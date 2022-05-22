@@ -5,18 +5,16 @@ import CardCantones from '../../components/CardCantones/CardCantones'
 import DisplayPagination from '../../components/DisplayPagination/DisplayPagination'
 
 export default function Cantones(){
-    const [data, setData] = useState([])
+    //const [data, setData] = useState([])
     const [dividedData,setDividedData] = useState([[]])
     const [pagina, setPagina] = useState(0)
     
     async function fetchData(){
         await getDataFromCollection('Cantones')
         .then((info) =>{
-            setData(info)
-            setDividedData(divideDataIntoArrays(info))
-        })
-        //setData(info)
-        //Dividimos la información en pequeños arreglos de 6 elementos, para poder realizar la paginación de mejor manera        
+            //setData(info)
+            setDividedData(divideDataIntoArrays(info))//Dividimos la información en pequeños arreglos de 6 elementos, para poder realizar la paginación de mejor manera
+        })        
     }
 
     //Divide un arreglo en pequeños arreglos de 6 elementos.
@@ -44,8 +42,6 @@ export default function Cantones(){
       fetchData()
     }, [])
 
-
-    console.log(dividedData)
     return(
         <>
             <h1 className='CantonesTitle'>Cantones de Guanacaste</h1>
