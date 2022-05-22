@@ -13,11 +13,11 @@ export default function BreadCrumbs(props){
                 return( 
                     <>
                         {info.hasOwnProperty('active')?
-                        <Breadcrumb.Item active>
+                        <Breadcrumb.Item key={info.nombre} active>
                                 <b>{info.nombre}</b>
                         </Breadcrumb.Item>
                         :
-                        <Breadcrumb.Item className='BreadCrumb-Link'>
+                        <Breadcrumb.Item className='BreadCrumb-Link' key={info.nombre}>
                             <Link to={info.link}>
                                 <span className='BreadCrumb-Link-Text'>{info.nombre}</span>
                             </Link>

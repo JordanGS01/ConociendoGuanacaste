@@ -17,8 +17,8 @@ export default function CardPatrimonio(props){
             <div id='CardCuerpo'>
             <FontAwesomeIcon id='Icono' style={{ color: silla, fontSize: "40px" }} icon={faWheelchair} />
             <FontAwesomeIcon id='Icono' style={{ color: nino, fontSize: "40px"}} icon={faChildren} />
-            <FontAwesomeIcon id='Icono' style={{ color: nino, fontSize: "40px"}} icon={faPersonWalkingWithCane} />
-            <FontAwesomeIcon id='Icono' style={{ color: nino, fontSize: "40px"}} icon={faPersonCane} />
+            <FontAwesomeIcon id='Icono' style={{ color: blind, fontSize: "40px"}} icon={faPersonWalkingWithCane} />
+            <FontAwesomeIcon id='Icono' style={{ color: anciano, fontSize: "40px"}} icon={faPersonCane} />
             </div>
             
         </Card.Body>
