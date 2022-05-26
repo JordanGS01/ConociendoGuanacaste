@@ -16,7 +16,7 @@ export default function Patrimonios(){
                     {nombre:`${params.Patrimonio}`,active:true}
                 ]}
             />
-            <p>Estamos en patrimonios</p>
+            <p>Estamos en patrimonios</p>``
         </>
     )
 }
