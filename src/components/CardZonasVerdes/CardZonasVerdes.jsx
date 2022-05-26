@@ -12,10 +12,10 @@ export default function CardCantones(props){
             <Card.Title >{props.nombre}</Card.Title>
             {props.descripcion}
             <div className="imagenesContainer">
-                <a href={props.ubicacion.linkgoogle}>
+                <a href={props.ubicacion.linkgoogle} target="_blank">
                     <img className='imagenCardZonasVerdes' src={google} />
                 </a>
-                <a href={props.ubicacion.linkwaze}>
+                <a href={props.ubicacion.linkwaze} target="_blank">
                     <img className='imagenCardZonasVerdes' src={waze} />
                 </a>
             </div>
