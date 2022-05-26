@@ -9,3 +9,13 @@
     transform: translateY(-3%);
 }
 
+.imagenesContainer{
+    display: flex;
+}
+
+.imagenCardZonasVerdes{
+    width: 40px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 10px;
+}
