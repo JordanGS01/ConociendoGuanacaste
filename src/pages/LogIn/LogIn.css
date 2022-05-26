@@ -24,3 +24,18 @@ form{
     text-align: center;
 }
 
+.input-gorpu{
+    position: relative;
+    left: 50px;
+}
+
+#input{
+    padding-left: 38px;
+}
+
+#icono{
+    font-size: 20px;
+    position: absolute;
+    top: 8px;
+    left: 10px;
+}

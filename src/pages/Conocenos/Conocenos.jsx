@@ -2,6 +2,9 @@ import './Conocenos.css'
 import Carousel from 'react-bootstrap/Carousel'
 import Image from 'react-bootstrap/Image'
 import Texto from '../../components/Texto/Texto'
+import casona from '../../images/casona.png'
+import templo from '../../images/templo.png'
+import iglesia from '../../images/iglesia.png'
 
 export default function Conocenos(){
     return(
@@ -10,34 +13,28 @@ export default function Conocenos(){
                 <Carousel.Item interval={3000}>
                     <img
                     className="d-block w-100"
-                    src="https://staticuestudio.blob.core.windows.net/buhomag/2016/10/06120007/everest1.jpg"
+                    src={casona}
                     alt="First slide"
                     />
                     <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item interval={3000}>
                     <img
                     className="d-block w-100"
-                    src="https://images.unsplash.com/photo-1585409677983-0f6c41ca9c3b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8&w=1000&q=80"
+                    src={templo}
                     alt="Second slide"
                     />
                     <Carousel.Caption>
-                    <h3>Second slide label</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item interval={3000}>
                     <img
                     className="d-block w-100"
-                    src="https://st.depositphotos.com/1563944/2419/i/600/depositphotos_24199705-stock-photo-three-close-mountain-peak.jpg"
+                    src={iglesia}
                     alt="Third slide"
                     />
                     <Carousel.Caption>
-                    <h3>Third slide label</h3>
-                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>

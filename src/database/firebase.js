@@ -3,6 +3,7 @@ import { initializeApp } from "firebase/app"
 import { createUserWithEmailAndPassword, getAuth,signInWithEmailAndPassword } from "firebase/auth"
 import { collection, deleteDoc, doc, getDocs, getFirestore, setDoc } from "firebase/firestore"
 import {v4 as uuid } from 'uuid'
+import { getStorage } from 'firebase/storage'
 
 const firebaseConfig = {
   apiKey: "AIzaSyAl4229uhxtEztfRpmGp2PBWR0vzuOuavI",
@@ -16,6 +17,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
+export const storage = getStorage(app)
 const db = getFirestore(app)
 const auth = getAuth();
 

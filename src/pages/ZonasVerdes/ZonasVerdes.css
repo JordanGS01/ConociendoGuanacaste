@@ -1,0 +1,11 @@
+.ZonasVerdesTitulo{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.ZonasVerdesContainer{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    margin-left: 15%;
+    
+}
