@@ -1,0 +1,20 @@
+#Cantones{
+    color: black;
+    text-decoration: none;
+    margin-top: 80px;
+   width: 100%;
+
+}
+#Cantones:hover{
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3%);
+}
+
+#Icono{
+    padding: 10px;
+}
+#CardCuerpo{
+    display: flex;
+    flex-direction: row;
+}
+

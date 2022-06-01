@@ -1,11 +1,16 @@
 import { db } from "./firebase";
-import { getDocs, collection } from "firebase/firestore";
+import { getDocs, collection, doc, getDoc } from "firebase/firestore";
 
 
-
-export async function getDataFromCollection(colName){
+//Recibe el nombre de la colección y retorna todos sus documentos
+export async function getDataFromCollection(colName, docName = "", subColName = ""){
     try{
-        const colRef = collection(db,colName)
+        let colRef
+        if(docName != "" && subColName != ""){
+            colRef = collection(db,colName,docName,subColName)
+        }else{
+            colRef = collection(db,colName)
+        }        
         const colSnapshot = await getDocs(colRef)
         const data = colSnapshot.docs.map(info => info.data())
         return data

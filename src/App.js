@@ -15,6 +15,7 @@ import ZonaV from './pages/ZonaV/ZonaV'
 import LogIn from './pages/LogIn/LogIn'
 import Registro from './pages/Registro/Registro'
 
+
 function App() {
   //ToDo: Hacer que al iniciar la app, "Conócenos" esté en negrita
   return (
