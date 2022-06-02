@@ -50,13 +50,15 @@ export default function LogIn(){
     };
 
     return(
-      <div class="row">
+      <div className='form'>
             <div class="col-md-6">
                 <img className='imagLog' src={imagenLog} />
             </div>
             <div name="form" class="col-md-6">
               <div id="bloqueFormLog">
-                <img className='images' src={cgLogo} />
+                <div className='logo'>
+                  <img className='images' src={cgLogo} />
+                </div>
                 <div class="titulo">
                   <h3>Ingresar</h3>
                 </div>

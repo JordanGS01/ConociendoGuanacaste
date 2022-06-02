@@ -45,7 +45,7 @@ export default function Canton(){
     useEffect(() => {
         fetchData()
     }, [])
-console.log(dividedData)
+
     return(
         <>
             <BreadCrumbs 

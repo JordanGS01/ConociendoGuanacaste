@@ -39,26 +39,21 @@ export default function Conocenos(){
                 </Carousel.Item>
             </Carousel>
             <main className='Conocenos-MainContainer'>
-                <h3 className='Title'>Acerca de nosotros</h3>
+                <h2 className='Title'>Acerca de nosotros</h2>
                 <div className='Conocenos-textItem1'>
                     <Texto 
                         titulo= "¿Quienes somos?" 
-                        contenido = "Somos un grupo de estudiantes" />
+                        contenido = "Somos un grupo de estudiantes de tercer año de la carrera de ingeniería en computación del Instituto Tecnologico de Costa Rica." />
                 </div>
                 <div className='Conocenos-textItem2 Conocenos-PLeft'>
                     <Texto 
                         titulo= "Proposito" 
-                        contenido = "Que los patrimonios culturales de La provincia de Guanacaste sean más conocidos "/>
-                </div>
-                <div className='Conocenos-textItem3'>
-                    <Texto 
-                        titulo= "¿A que nos dedicamos?" 
-                        contenido = "Somos un grupo de estudiantes" />
+                        contenido = "Que los patrimonios culturales de La provincia de Guanacaste sean más conocidos. "/>
                 </div>
                 <div className='Conocenos-textItem4 Conocenos-PLeft'>
                     <Texto 
                         titulo= "¿Por qué confiar en nosotros?" 
-                        contenido = "Que los patrimonios culturales de La provincia de Guanacaste sean más conocidos "/>
+                        contenido = "Toda la información brindada dentro de esta página fue revisada de forma previa."/>
                 </div>
                 <div className='Conocenos-image'>
                     <Image fluid  src="https://cdn2.civitatis.com/costa-rica/guanacaste/galeria/header/cataratas-llano-cortes.jpg" />
@@ -69,7 +64,6 @@ export default function Conocenos(){
                         contenido = "Ofrece información sobre los patrimonios naturales de la provincia de Guanacaste, Costa Rica, además de la accesibilidad que estos proveen a sus visitantes (acceso a silla de ruedas, senderos accesibles fácilmente, entre otros)."/>
                 </div>
             </main>
-
             <div className='Conocenos-CCD'>
                 <h1>Conoce, cuida y disfruta.</h1>
             </div>
