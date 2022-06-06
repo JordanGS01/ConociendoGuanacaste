@@ -65,7 +65,7 @@ export default function Canton(){
                                 link={`/Cantones/${params.Canton}/${patrimonio.nombre}`}
                                 src={patrimonio.imagenes.length!=0?patrimonio.imagenes[0]:""}
                                 nombre={patrimonio.nombre}
-                                descripcion={patrimonio.descripcion}
+                                direccion={patrimonio.ubicacion}
                                 silla={patrimonio.accesibilidad.silla?"blue":"grey"}
                                 nino={patrimonio.accesibilidad.nino?"blue":"grey"}
                                 blind={patrimonio.accesibilidad.blind?"blue":"grey"}
