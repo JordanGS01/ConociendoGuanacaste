@@ -10,10 +10,11 @@ export default function CardPatrimonio(props){
     const anciano= props.anciano;
     return(  
     <Card id='Cantones' as={Link} to={props.link} style={{ width: '18rem' }} >
-        <Card.Img  variant="top" src= {props.src} alt={`Imagen del paisaje de ${props.nombre}`}/>
+        <Card.Img variant="top" src= {props.src} alt={`Imagen del paisaje de ${props.nombre}`} />
+        
         <Card.Body id='body'>
             <Card.Title >{props.nombre}</Card.Title>
-            {props.descripcion}
+            {props.direccion}
             <div id='CardCuerpo'>
             <FontAwesomeIcon id='Icono' style={{ color: silla, fontSize: "40px" }} icon={faWheelchair} />
             <FontAwesomeIcon id='Icono' style={{ color: nino, fontSize: "40px"}} icon={faChildren} />
