@@ -34,25 +34,34 @@ export default function Patrimonios(){
                     {nombre:`${params.Patrimonio}`,active:true}
                 ]}
             />
-            <h1>{data.nombre}</h1>
-            <p>{data.descripcion}</p>
-            <p>Horario de atención: {data.horario}</p>     
-            <div id='ubicacion'>
-                <p>Como llegar: </p> 
-                <a href={data.geolocalizacion.googleMaps} target="_blank">
-                    <img className='imagenCardZonasVerdes' src={google} />
-                </a>
-                <a href="" target="_blank">
-                    <img className='imagenCardZonasVerdes' src={waze} />
-                </a>
-            </div>  
-            <div id='accesibilidad'>
-                <p>Accesibilidad: </p> 
-                <FontAwesomeIcon id='Icono' style={{ color: data.accesibilidad.silla?"blue":"grey", fontSize: "40px" }} icon={faWheelchair} />
-                <FontAwesomeIcon id='Icono' style={{ color: data.accesibilidad.nino?"blue":"grey", fontSize: "40px"}} icon={faChildren} />
-                <FontAwesomeIcon id='Icono' style={{ color: data.accesibilidad.blind?"blue":"grey", fontSize: "40px"}} icon={faPersonWalkingWithCane} />
-                <FontAwesomeIcon id='Icono' style={{ color: data.accesibilidad.anciano?"blue":"grey", fontSize: "40px"}} icon={faPersonCane} />
-            </div>        
+            {/*Se engloba todo en una etiqueta main porque este es el contenido principal de la página! */}
+            <main className='Patrimonio-MainContentContainer'>
+                <h1>{data.nombre}</h1>
+                {/*Falta hacer el display de las imágenes*/}
+                <p align="justify">{data.descripcion}</p>
+                <p><strong>Horario de atención:</strong> {data.horario}</p>     
+                <div className='Patrimonio-Ubicacion'>
+                    <p><strong>Como llegar:</strong></p> 
+                    <nav>{/*Estos otros se engloban en nav porque son componentes de navegación*/}
+                        <a href={data.geolocalizacion.googleMaps} target="_blank">
+                            <img className='imagenCardZonasVerdes' src={google} />
+                        </a>
+                        <a href={data.geolocalizacion.waze} target="_blank">
+                            <img className='imagenCardZonasVerdes' src={waze} />
+                        </a>
+                    </nav>
+                </div>
+
+                <div className='Patrimonio-Accesibilidad'>
+                    <p><strong>Accesibilidad:</strong> </p>
+                    <div>
+                        <FontAwesomeIcon id='Icono' style={{ color: data.accesibilidad.silla?"blue":"grey", fontSize: "40px" }} icon={faWheelchair} />
+                        <FontAwesomeIcon id='Icono' style={{ color: data.accesibilidad.nino?"blue":"grey", fontSize: "40px"}} icon={faChildren} />
+                        <FontAwesomeIcon id='Icono' style={{ color: data.accesibilidad.blind?"blue":"grey", fontSize: "40px"}} icon={faPersonWalkingWithCane} />
+                        <FontAwesomeIcon id='Icono' style={{ color: data.accesibilidad.anciano?"blue":"grey", fontSize: "40px"}} icon={faPersonCane} />
+                    </div>    
+                </div>
+            </main>
         </>
     )
 }

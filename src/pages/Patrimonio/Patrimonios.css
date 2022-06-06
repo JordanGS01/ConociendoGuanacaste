@@ -1,3 +1,29 @@
-p{
+.Patrimonio-MainContentContainer{
+    width: 90%;
+    margin: 0px auto 0px auto;/*Esta es una manera de centrar el contenido*/
+}
+
+.Patrimonio-MainContentContainer p{
     font-size:x-large;
+    margin-top: 20px;
+}
+
+.Patrimonio-Ubicacion,.Patrimonio-Accesibilidad{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+.Patrimonio-Ubicacion{
+    width: 30%;
+}
+
+@media screen and (max-width: 800px) {
+    .Patrimonio-Ubicacion,.Patrimonio-Accesibilidad{
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .Patrimonio-Ubicacion{
+        width: 70%;
+    }
 }

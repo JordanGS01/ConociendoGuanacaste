@@ -2,18 +2,21 @@ import './Conocenos.css'
 import Carousel from 'react-bootstrap/Carousel'
 import Image from 'react-bootstrap/Image'
 import Texto from '../../components/Texto/Texto'
-import casona from '../../images/casona.png'
-import templo from '../../images/templo.png'
-import iglesia from '../../images/iglesia.png'
+import playaGuanacaste from '../../images/CatarataCeleste.jpg'
+import GuanacastePalo from '../../images/GuanacastePalo.webp'
+import CatarataCeleste from '../../images/playaGuanacaste.avif'
+
+import {auth} from '../../database/firebase'
 
 export default function Conocenos(){
+    console.log(auth.currentUser)
     return(
         <>
             <Carousel touch={true}>
                 <Carousel.Item interval={3000}>
                     <img
                     className="d-block w-100"
-                    src={casona}
+                    src={playaGuanacaste}
                     alt="First slide"
                     />
                     <Carousel.Caption>
@@ -22,7 +25,7 @@ export default function Conocenos(){
                 <Carousel.Item interval={3000}>
                     <img
                     className="d-block w-100"
-                    src={templo}
+                    src={GuanacastePalo}
                     alt="Second slide"
                     />
                     <Carousel.Caption>
@@ -31,7 +34,7 @@ export default function Conocenos(){
                 <Carousel.Item interval={3000}>
                     <img
                     className="d-block w-100"
-                    src={iglesia}
+                    src={CatarataCeleste}
                     alt="Third slide"
                     />
                     <Carousel.Caption>
