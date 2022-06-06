@@ -20,7 +20,6 @@ export default function CardPatrimonio(props){
             <FontAwesomeIcon id='Icono' style={{ color: blind, fontSize: "40px"}} icon={faPersonWalkingWithCane} />
             <FontAwesomeIcon id='Icono' style={{ color: anciano, fontSize: "40px"}} icon={faPersonCane} />
             </div>
-            
         </Card.Body>
     </Card>
     

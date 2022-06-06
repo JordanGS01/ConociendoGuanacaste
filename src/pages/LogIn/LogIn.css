@@ -39,3 +39,16 @@ form{
     top: 8px;
     left: 10px;
 }
+
+@media only screen and (max-width: 1090px) {
+    .form {
+      flex-direction:column;
+    }
+    .titulo{
+        text-align: center;
+    }
+    .logo{
+        text-align: center;
+        margin-right: 50px;
+    }
+  }

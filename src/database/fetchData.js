@@ -2,6 +2,12 @@ import { db } from "./firebase";
 import { getDocs, collection, doc, getDoc } from "firebase/firestore";
 
 
+export async function getPatrimonio(nombreCanton,nombrePatrimonio){
+    const messageRef = doc(db, "Cantones", nombreCanton, "Patrimonios", nombrePatrimonio);
+    const docSnap = await getDoc(messageRef);
+    return docSnap.data()
+}
+    
 //Recibe el nombre de la colección y retorna todos sus documentos
 export async function getDataFromCollection(colName, docName = "", subColName = ""){
     try{
@@ -18,4 +24,6 @@ export async function getDataFromCollection(colName, docName = "", subColName = 
     catch(error){
         console.log(error)
     }
+
+
 }

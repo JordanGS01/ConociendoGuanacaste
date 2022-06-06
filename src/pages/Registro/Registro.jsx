@@ -72,13 +72,15 @@ export default function Registro(){
   
 
     return(
-        <div class="row">
+        <div className='form'>
             <div class="col-md-6">
                 <img className='imagLog' src={imagenLog} />
             </div>
             <div name="form" class="col-md-6">
                 <div id="bloqueFormRegis">
-                    <img className='images' src={cgLogo} />
+                    <div className='logo'>
+                        <img className='images' src={cgLogo} />
+                    </div>
                     <div class="titulo">
                         <h3>Registrarse</h3>
                     </div>
