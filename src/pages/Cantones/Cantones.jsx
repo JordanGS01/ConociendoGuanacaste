@@ -5,14 +5,12 @@ import CardCantones from '../../components/CardCantones/CardCantones'
 import DisplayPagination from '../../components/DisplayPagination/DisplayPagination'
 
 export default function Cantones(){
-    //const [data, setData] = useState([])
     const [dividedData,setDividedData] = useState([[]])
     const [pagina, setPagina] = useState(0)
     
     async function fetchData(){
         await getDataFromCollection('Cantones')
         .then((info) =>{
-            //setData(info)
             setDividedData(divideDataIntoArrays(info))//Dividimos la información en pequeños arreglos de 6 elementos, para poder realizar la paginación de mejor manera
         })        
     }

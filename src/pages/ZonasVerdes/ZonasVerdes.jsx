@@ -13,7 +13,6 @@ export default function ZonasVerdes(){
         .then((info) =>{
             setDividedData(divideDataIntoArrays(info))
         })
-        //setData(info)
         //Dividimos la información en pequeños arreglos de 6 elementos, para poder realizar la paginación de mejor manera        
     }
 
