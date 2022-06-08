@@ -136,10 +136,8 @@ export default function ZonaV() {
                             <option value="Hojancha">Hojancha</option>
                             <option value="La Cruz">La Cruz</option>
                             <option value="Liberia"> Liberia </option>
-                            <option value="Nandayure">Nandayure</option>
                             <option value="Nicoya">Nicoya</option>
                             <option value="Santa Cruz">Santa Cruz</option>
-                            <option value="Tilarán">Tilarán</option>
                         </Form.Select>
                         </Form.Group>
                         <br />
