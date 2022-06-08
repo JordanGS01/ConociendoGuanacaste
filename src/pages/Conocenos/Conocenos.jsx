@@ -1,11 +1,14 @@
 import './Conocenos.css'
-import Carousel from 'react-bootstrap/Carousel'
 import Image from 'react-bootstrap/Image'
+
 import Texto from '../../components/Texto/Texto'
+import TopNavBar from '../../components/TopNavBar/TopNavBar'
+import DisplayCarousel from '../../components/DisplayCarousel/DisplayCarousel'
+
 import playaGuanacaste from '../../images/CatarataCeleste.jpg'
 import GuanacastePalo from '../../images/GuanacastePalo.webp'
 import CatarataCeleste from '../../images/playaGuanacaste.avif'
-import TopNavBar from '../../components/TopNavBar/TopNavBar'
+
 
 import {auth} from '../../database/firebase'
 
@@ -13,35 +16,8 @@ export default function Conocenos(){
     return(
         <>
             <TopNavBar conocenos={true}/>
-            <Carousel touch={true}>
-                <Carousel.Item interval={3000}>
-                    <img
-                    className="d-block w-100"
-                    src={playaGuanacaste}
-                    alt="First slide"
-                    />
-                    <Carousel.Caption>
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item interval={3000}>
-                    <img
-                    className="d-block w-100"
-                    src={GuanacastePalo}
-                    alt="Second slide"
-                    />
-                    <Carousel.Caption>
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item interval={3000}>
-                    <img
-                    className="d-block w-100"
-                    src={CatarataCeleste}
-                    alt="Third slide"
-                    />
-                    <Carousel.Caption>
-                    </Carousel.Caption>
-                </Carousel.Item>
-            </Carousel>
+            <DisplayCarousel imagenes={[playaGuanacaste,GuanacastePalo,CatarataCeleste]} />
+
             <main className='Conocenos-MainContainer'>
                 <h2 className='Title'>Acerca de nosotros</h2>
                 <div className='Conocenos-textItem1'>

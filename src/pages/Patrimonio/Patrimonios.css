@@ -48,3 +48,8 @@
 .Patrimonio-Comentarios-Titulo{
     margin: 10px 0px 0px 10px;
 }
+
+.Patrimonio-CarouselContainer{
+    width: 50%;
+    margin: 10px auto 0px auto;
+}

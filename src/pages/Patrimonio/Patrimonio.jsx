@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react'
 import BreadCrumbs from '../../components/BreadCrumbs/BreadCrumbs'
 import Comentario from '../../components/Comentario/Comentario';
 import TopNavBar from '../../components/TopNavBar/TopNavBar'
+import DisplayCarousel from '../../components/DisplayCarousel/DisplayCarousel';
 
 import { getPatrimonio } from '../../database/fetchData';
 import { obtenerUserLog } from '../../database/firebase';
@@ -78,9 +79,9 @@ export default function Patrimonios(){
             setIdNombreUsuario()
         }
     }, [userIn])
-
+    
     if (data === undefined || !data.hasOwnProperty('geolocalizacion')){return}//Filtro. Si no se cumplen las condiciones, no se renderiza nada
-
+    
     return(
         <>
             <TopNavBar cantones={true}/>
@@ -94,7 +95,10 @@ export default function Patrimonios(){
             {/*Se engloba todo en una etiqueta main porque este es el contenido principal de la página! */}
             <main className='Patrimonio-MainContentContainer'>
                 <h1>{data.nombre}</h1>
-                {/*Falta hacer el display de las imágenes*/}
+                <div className='Patrimonio-CarouselContainer'>
+                    <DisplayCarousel imagenes={data.imagenes} />
+                </div>
+
                 <p align="justify">{data.descripcion}</p>
                 <p><strong>Horario de atención:</strong> {data.horario}</p>     
                 <div className='Patrimonio-Ubicacion'>

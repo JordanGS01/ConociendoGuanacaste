@@ -20,8 +20,6 @@ export default function TopNavBar(props) {
     setUserIn(obtenerUserLog())
   }, [userIn])
   
-
-  
   return (    
     <Navbar variant="dark" className='TNV-Container'>
       <Container>
