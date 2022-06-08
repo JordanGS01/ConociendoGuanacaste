@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 import { obtenerUserLog ,logOut } from '../../database/firebase';
 import { useEffect, useState } from 'react';
 
-export default function TopNavBar() {
+export default function TopNavBar(props) {
   const [userIn, setUserIn] = useState(false)
 
   function logOutUser(){
@@ -27,14 +27,34 @@ export default function TopNavBar() {
       <Container>
         <Navbar.Brand><img src={cgLogo} /></Navbar.Brand>
         <Nav className="justify-content-center flex-grow-1">          
-          <Nav.Link as={Link} to='/' eventKey='conocenos'>Conócenos</Nav.Link>
-          <Nav.Link as={Link} to='/Cantones' eventKey='cantones' className='mx-3'>Cantones</Nav.Link>
-          <Nav.Link as={Link} to='/ZonasVerdes' eventKey='zonasVerdes'>Zonas verdes</Nav.Link>          
+          {props.hasOwnProperty("conocenos")?
+            <Nav.Link as={Link} to='/' eventKey='conocenos' active>Conócenos</Nav.Link>
+            :
+            <Nav.Link as={Link} to='/' eventKey='conocenos'>Conócenos</Nav.Link>
+          }
+          {props.hasOwnProperty("cantones")?
+            <Nav.Link as={Link} to='/Cantones' eventKey='cantones' className='mx-3' active>Cantones</Nav.Link>
+            :
+            <Nav.Link as={Link} to='/Cantones' eventKey='cantones' className='mx-3'>Cantones</Nav.Link>
+          }
+          {props.hasOwnProperty("zonasVerdes")?
+            <Nav.Link as={Link} to='/ZonasVerdes' eventKey='zonasVerdes' active>Zonas verdes</Nav.Link>
+            :
+            <Nav.Link as={Link} to='/ZonasVerdes' eventKey='zonasVerdes'>Zonas verdes</Nav.Link>
+          }
         </Nav>
         {!userIn?
           <>
-            <Button as={Link} to='/LogIn' variant="success">Ingresar</Button>
-            <Button as={Link} to='/Registro' variant="success" className='TNV-Button'>Registrarse</Button>      
+            {props.hasOwnProperty("login")?
+              <Button as={Link} to='/LogIn' variant="success" active>Ingresar</Button>
+              :
+              <Button as={Link} to='/LogIn' variant="success">Ingresar</Button>
+            }
+            {props.hasOwnProperty("registro")?
+              <Button as={Link} to='/Registro' variant="success" className='TNV-Button' active>Registrarse</Button>
+              :
+              <Button as={Link} to='/Registro' variant="success" className='TNV-Button'>Registrarse</Button>
+            }
           </>
           :
           <><Button as={Link} to='/' variant="success" onClick={logOutUser}>Cerrar sesión</Button></>

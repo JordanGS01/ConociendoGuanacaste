@@ -8,6 +8,7 @@ import cgLogo from '../../images/cgLogo.png'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faLock} from '@fortawesome/free-solid-svg-icons'
 import {faEnvelope} from '@fortawesome/free-solid-svg-icons'
+import TopNavBar from '../../components/TopNavBar/TopNavBar'
 
 export default function LogIn(){
     let navigate = useNavigate()
@@ -50,6 +51,8 @@ export default function LogIn(){
     };
 
     return(
+      <>
+      <TopNavBar login={true}/>
       <div className='form'>
             <div class="col-md-6">
                 <img className='imagLog' src={imagenLog} />
@@ -81,5 +84,6 @@ export default function LogIn(){
               </div>
             </div>
           </div>
+        </>
     )
 }

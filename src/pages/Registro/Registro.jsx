@@ -9,7 +9,7 @@ import {firebaseRegistrarUsuario} from '../../database/firebase';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faLock} from '@fortawesome/free-solid-svg-icons'
 import {faEnvelope} from '@fortawesome/free-solid-svg-icons'
-
+import TopNavBar from '../../components/TopNavBar/TopNavBar'
 
 export default function Registro(){
     const [valorEmail, setValorEmail] = useState('');
@@ -71,6 +71,8 @@ export default function Registro(){
   
 
     return(
+        <>
+        <TopNavBar registro={true}/>
         <div className='form'>
             <div class="col-md-6">
                 <img className='imagLog' src={imagenLog} alt="Colage de imagenes representativas de la provincia de Guanacaste"/>
@@ -112,5 +114,6 @@ export default function Registro(){
                 </div>
             </div>
         </div>
+    </>
     )
 }

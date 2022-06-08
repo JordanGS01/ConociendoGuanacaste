@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import BreadCrumbs from '../../components/BreadCrumbs/BreadCrumbs'
 import DisplayPagination from '../../components/DisplayPagination/DisplayPagination'
 import CardPatrimonio from '../../components/CardPatrimonio/CardPatrimonio'
+import TopNavBar from '../../components/TopNavBar/TopNavBar'
 
 import { useEffect, useState } from 'react'
 
@@ -48,6 +49,7 @@ export default function Canton(){
 
     return(
         <>
+        <TopNavBar cantones={true}/>
             <BreadCrumbs 
                 links={[
                     {link:'/Cantones',nombre:'Cantones'},

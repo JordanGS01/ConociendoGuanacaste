@@ -1,8 +1,10 @@
 import './ZonasVerdes.css'
 import { getDataFromCollection } from '../../database/fetchData'
 import { useEffect, useState } from 'react'
+
 import CardZonasVerdes from '../../components/CardZonasVerdes/CardZonasVerdes'
 import DisplayPagination from '../../components/DisplayPagination/DisplayPagination'
+import TopNavBar from '../../components/TopNavBar/TopNavBar'
 
 export default function ZonasVerdes(){
     const [dividedData,setDividedData] = useState([[]])
@@ -44,6 +46,7 @@ export default function ZonasVerdes(){
 
     return(
         <>
+            <TopNavBar zonasVerdes={true}/>
             <h1 className='ZonasVerdesTitulo'>Zonas Verdes</h1>
             <a href="./ZonasVerdes/:ZonaV">Ir al post de los enlaces</a>
             <main className='ZonasVerdesContainer'>            

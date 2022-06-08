@@ -1,8 +1,10 @@
 import './Cantones.css'
 import { getDataFromCollection } from '../../database/fetchData'
 import { useEffect, useState } from 'react'
+
 import CardCantones from '../../components/CardCantones/CardCantones'
 import DisplayPagination from '../../components/DisplayPagination/DisplayPagination'
+import TopNavBar from '../../components/TopNavBar/TopNavBar'
 
 export default function Cantones(){
     const [dividedData,setDividedData] = useState([[]])
@@ -42,6 +44,7 @@ export default function Cantones(){
 
     return(
         <>
+            <TopNavBar cantones={true}/>
             <h1 className='CantonesTitle'>Cantones de Guanacaste</h1>
             <main className='CantonesContainer'>            
                 {dividedData[pagina].map((canton) => {

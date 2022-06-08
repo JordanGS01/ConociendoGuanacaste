@@ -5,12 +5,14 @@ import Texto from '../../components/Texto/Texto'
 import playaGuanacaste from '../../images/CatarataCeleste.jpg'
 import GuanacastePalo from '../../images/GuanacastePalo.webp'
 import CatarataCeleste from '../../images/playaGuanacaste.avif'
+import TopNavBar from '../../components/TopNavBar/TopNavBar'
 
 import {auth} from '../../database/firebase'
 
 export default function Conocenos(){
     return(
         <>
+            <TopNavBar conocenos={true}/>
             <Carousel touch={true}>
                 <Carousel.Item interval={3000}>
                     <img

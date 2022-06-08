@@ -8,6 +8,7 @@ import {v4} from 'uuid'
 import imagenLog from '../../images/imagenLog.PNG'
 import cgLogo from '../../images/cgLogo.png'
 import { useNavigate } from 'react-router-dom'
+import TopNavBar from '../../components/TopNavBar/TopNavBar'
 
 export default function ZonaV() {
 
@@ -100,6 +101,8 @@ export default function ZonaV() {
       };
       
       return (
+        <>
+        <TopNavBar zonasVerdes={true}/>
         <div className="form">
             <div class="col-md-6">
                 <img className='imagLog' src={imagenLog} />
@@ -166,5 +169,6 @@ export default function ZonaV() {
                 </div>
             </div>
         </div>
+        </>
     )
 }

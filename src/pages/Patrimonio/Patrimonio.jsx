@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 
 import BreadCrumbs from '../../components/BreadCrumbs/BreadCrumbs'
 import Comentario from '../../components/Comentario/Comentario';
+import TopNavBar from '../../components/TopNavBar/TopNavBar'
 
 import { getPatrimonio } from '../../database/fetchData';
 import { obtenerUserLog } from '../../database/firebase';
@@ -82,6 +83,7 @@ export default function Patrimonios(){
 
     return(
         <>
+            <TopNavBar cantones={true}/>
             <BreadCrumbs 
                 links={[
                     {link:'/Cantones',nombre:'Cantones'},

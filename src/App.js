@@ -17,10 +17,8 @@ import Registro from './pages/Registro/Registro'
 
 
 function App() {
-  //ToDo: Hacer que al iniciar la app, "Conócenos" esté en negrita
   return (
     <Router className='App'>
-      <TopNavBar />
       <Routes>
         {/*Acá van las rutas en este estilo:
         <Route path="/" element={<MainPage />}/>
