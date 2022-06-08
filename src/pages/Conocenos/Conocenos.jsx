@@ -33,7 +33,7 @@ export default function Conocenos(){
                 <div className='Conocenos-textItem4 Conocenos-PLeft'>
                     <Texto 
                         titulo= "¿Por qué confiar en nosotros?" 
-                        contenido = "Toda la información brindada dentro de esta página fue revisada de forma previa."/>
+                        contenido = "Nos hemos capacitado fuertemente para poder llevar acabo esta aplicación. Además, toda la información brindada dentro de esta página fue revisada de forma previa."/>
                 </div>
                 <div className='Conocenos-image'>
                     <Image fluid  src="https://cdn2.civitatis.com/costa-rica/guanacaste/galeria/header/cataratas-llano-cortes.jpg" />
