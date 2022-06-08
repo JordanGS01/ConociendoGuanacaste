@@ -66,16 +66,15 @@ export default function LogIn(){
                   <h3>Ingresar</h3>
                 </div>
                 <Form noValidate validated={validated} onSubmit={ChequeoForm}>
-                  <Form.Group  controlId="formBasicEmail">
+                  <Form.Group  controlId="formBasicEmail" className='campo'>
                     <Form.Control type="email" placeholder="Correo electrónico" onChange={onChangeEmail} required />
-                    <FontAwesomeIcon id="icono" icon={faEnvelope} />
+                    <FontAwesomeIcon className="icono" icon={faEnvelope} />
                     <Form.Control.Feedback type="invalid">Porfavor introduzca su correo electrónico.</Form.Control.Feedback>
                   </Form.Group>
                   <br/>
-
-                  <Form.Group controlId="formBasicPassword">
+                  <Form.Group controlId="formBasicPassword" className='campo'>
                     <Form.Control type="password" placeholder="Ingresar contraseña" onChange={onChangeCon} required />
-                    <FontAwesomeIcon id="icono" icon={faLock} />
+                    <FontAwesomeIcon className="icono" icon={faLock} />
                     <Form.Control.Feedback type="invalid">Porfavor introduzca su contraseña.</Form.Control.Feedback>
                   </Form.Group>
                   <br/>

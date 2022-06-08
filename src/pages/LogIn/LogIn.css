@@ -33,9 +33,13 @@ form{
     padding-left: 38px;
 }
 
-#icono{
+.campo{
+    display: flex;
+}
+
+.icono{
     font-size: 20px;
-    position: absolute;
+    position: relative;
     top: 8px;
     left: 10px;
 }
