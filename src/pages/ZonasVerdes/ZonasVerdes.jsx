@@ -1,14 +1,19 @@
 import './ZonasVerdes.css'
 import { getDataFromCollection } from '../../database/fetchData'
 import { useEffect, useState } from 'react'
-
+import Card from 'react-bootstrap/Card'
+import { Link } from 'react-router-dom';
 import CardZonasVerdes from '../../components/CardZonasVerdes/CardZonasVerdes'
 import DisplayPagination from '../../components/DisplayPagination/DisplayPagination'
 import TopNavBar from '../../components/TopNavBar/TopNavBar'
+import agregar from '../../images/agregar.png'
+import { obtenerUserLog } from '../../database/firebase';
+
 
 export default function ZonasVerdes(){
     const [dividedData,setDividedData] = useState([[]])
     const [pagina, setPagina] = useState(0)
+    const [userIn, setUserIn] = useState(false)
     
     async function fetchData(){
         await getDataFromCollection('zonasVerdes')
@@ -41,15 +46,23 @@ export default function ZonasVerdes(){
 
     useEffect(() => {
       fetchData()
-    }, [])
+      setUserIn(obtenerUserLog())
+    }, [userIn])
 
 
     return(
         <>
             <TopNavBar zonasVerdes={true}/>
-            <h1 className='ZonasVerdesTitulo'>Zonas Verdes</h1>
-            <a href="./ZonasVerdes/:ZonaV">Ir al post de los enlaces</a>
-            <main className='ZonasVerdesContainer'>            
+            <h1 className='ZonasVerdesTitulo'>Zonas Verdes</h1>  
+            <main className='ZonasVerdesContainer'>     
+                {userIn? 
+                    <Card id='agregar' as={Link} to='/ZonasVerdes/:ZonaV' style={{ width: '18rem' }} >
+                        <Card.Img  variant="top" src={agregar}  alt={`Imagen del paisaje`}/>
+                        <Card.Body id='body'>
+                            <Card.Title >Agregar una Zona Verde</Card.Title>
+                        </Card.Body>
+                    </Card>
+                :<></>}  
                 {dividedData[pagina].map((canton) => {
                     return(
                         <CardZonasVerdes
