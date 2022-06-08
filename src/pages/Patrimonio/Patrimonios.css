@@ -27,3 +27,24 @@
         width: 70%;
     }
 }
+
+.Patrimonio-Comentarios{
+    width: 90%;
+    margin: 50px auto 0px auto;/*Esta es una manera de centrar el contenido*/
+    background-color: #C4C4C4;
+    border-radius: 10px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.Comentario-AgregarNuevoComentario{
+    width: 90%;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.Patrimonio-Comentarios-Titulo{
+    margin: 10px 0px 0px 10px;
+}

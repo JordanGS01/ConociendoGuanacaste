@@ -9,7 +9,6 @@ import CatarataCeleste from '../../images/playaGuanacaste.avif'
 import {auth} from '../../database/firebase'
 
 export default function Conocenos(){
-    console.log(auth.currentUser)
     return(
         <>
             <Carousel touch={true}>

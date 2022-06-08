@@ -54,7 +54,6 @@ export default function Registro(){
     const [validated, setValidated] = useState(false);
 
     async function ChequeoForm (event) {
-        debugger;
         const form = event.currentTarget;
         if (form.checkValidity() === false) {
             event.preventDefault();
@@ -74,12 +73,12 @@ export default function Registro(){
     return(
         <div className='form'>
             <div class="col-md-6">
-                <img className='imagLog' src={imagenLog} />
+                <img className='imagLog' src={imagenLog} alt="Colage de imagenes representativas de la provincia de Guanacaste"/>
             </div>
             <div name="form" class="col-md-6">
                 <div id="bloqueFormRegis">
                     <div className='logo'>
-                        <img className='images' src={cgLogo} />
+                        <img className='images' src={cgLogo} alt="Logo de Conociendo Guanacaste. El logo es una C y una G, las siglas del slogan."/>
                     </div>
                     <div class="titulo">
                         <h3>Registrarse</h3>

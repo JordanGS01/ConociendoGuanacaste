@@ -58,4 +58,28 @@ export async function firebaseEliminar(coleccion, id) {
   await deleteDoc(doc(getFirestore(), coleccion, id));
 }
 
+export function obtenerUserLog(){
+  try{
+    const user = auth.currentUser;
+    if(user){
+      return user
+    }else{
+      return false
+    }
+  }catch(error){
+    console.log(error)
+  }
+}
+
+export async function logOut(){
+  try{
+    await auth.signOut().then(()=>{
+      alert("Sesión cerrada con éxito!")
+    })
+  }
+  catch(error){
+    console.log(error)
+  }
+}
+
 export {db,auth}

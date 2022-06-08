@@ -5,7 +5,23 @@ import './TopNavBar.css'
 import { Navbar, Container, Nav, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
+import { obtenerUserLog ,logOut } from '../../database/firebase';
+import { useEffect, useState } from 'react';
+
 export default function TopNavBar() {
+  const [userIn, setUserIn] = useState(false)
+
+  function logOutUser(){
+    logOut()
+    setUserIn(false);
+  }
+
+  useEffect(() => {
+    setUserIn(obtenerUserLog())
+  }, [userIn])
+  
+
+  
   return (    
     <Navbar variant="dark" className='TNV-Container'>
       <Container>
@@ -14,9 +30,15 @@ export default function TopNavBar() {
           <Nav.Link as={Link} to='/' eventKey='conocenos'>Conócenos</Nav.Link>
           <Nav.Link as={Link} to='/Cantones' eventKey='cantones' className='mx-3'>Cantones</Nav.Link>
           <Nav.Link as={Link} to='/ZonasVerdes' eventKey='zonasVerdes'>Zonas verdes</Nav.Link>          
-        </Nav>      
-        <Button as={Link} to='/LogIn' variant="success">Ingresar</Button>
-        <Button as={Link} to='/Registro' variant="success" className='TNV-Button'>Registrarse</Button>      
+        </Nav>
+        {!userIn?
+          <>
+            <Button as={Link} to='/LogIn' variant="success">Ingresar</Button>
+            <Button as={Link} to='/Registro' variant="success" className='TNV-Button'>Registrarse</Button>      
+          </>
+          :
+          <><Button as={Link} to='/' variant="success" onClick={logOutUser}>Cerrar sesión</Button></>
+        }
       </Container>
     </Navbar>    
   );

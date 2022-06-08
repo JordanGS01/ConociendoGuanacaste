@@ -1,0 +1,10 @@
+.Comentario-Container{
+    width: 90%;
+    margin: 20px auto 20px auto;
+    background-color: #E4E4E4;
+    border-radius: 10px;
+}
+
+.Comentario-NombreUsuario,.Comentario-Comentario{
+    margin-left: 5%;
+}
